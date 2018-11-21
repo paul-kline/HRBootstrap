@@ -17,6 +17,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
     <!-- icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="https://union.ku.edu/sites/union.ku.edu/files/files/careersite/images/apple-touch-icon.png" />
@@ -29,7 +30,7 @@
     <link rel="stylesheet" href="./css.css" />
     <!-- end fake header -->
 
-<div class="container mt-2">
+<div class="container">
 <!-- begin slideshow -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -78,11 +79,11 @@
     </a>
   </div>
 <!-- end slideshow -->
-     <div class="text-center text-black m-1" style="font-size: 2.5em;">
+     <div class="text-center text-black m-1 title" >
       Part Time
      </div>
      <div class="w3-container w3-large w3-center theme-text-color-dark w3-mobile">
-      <div class="text-center">
+      <div class="text-center blurb">
             The Memorial Union actively seeks candidates whose commitments and contributions advance the Union’s mission. We offer exciting career opportunities for professionals and students. The Union is the largest employer of students on the University of Kansas campus.
             <br><br>
             Check out our benefits and Join our team!
@@ -187,133 +188,133 @@
 
     <!-- begin footer ---------------------------------------------------------------------------------------------- -->
     <style>
-      .flex-row {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        align-content: flex-start;
-      }
-      .icon-row {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        align-items: center;
-        align-content: flex-start;
-      }
-      .flex-item {
-        /* flex-grow: 1; */
-        /* flex-basis: 1; */
-        /* grow shrink basis */
-        flex: 1 1 0;
-      }
-      .tiny-text {
-        font-size: 0.7em;
-      }
-      #zone-ku-footer-wrapper a:link {
-        color: white;
-      }
-      #zone-ku-footer-wrapper a:visited {
-        color:  white;
-      }
-      #zone-ku-footer-wrapper a:hover {
-        color:  var(--theme-dark);
-      }
-      #zone-ku-footer-wrapper .fab:hover {
-        color:   var(--theme-dark);
-      }
-    </style>
-    <div id="zone-ku-footer-wrapper" class="theme-background container-fluid text-white">
-       
-      <div id="zone-ku-footer" class="pt-2">
-        <div class="flex-row mb-4">
-          <div class="flex-item " style="min-width: 167px;">
-            <a href="http://www.ku.edu/"> <img src="//webmedia.ku.edu/templates/2012/images/ku_sig_logo.png" width="167" height="40" alt="KU signature" title="The University of Kansas" /> </a>
-          </div>
-          <div class="flex-item flex-row "><img class="mx-auto" id="ku_footer_jayhawk" src="//webmedia.ku.edu/templates/2012/images/ku_jayhawk.png" width="56" height="50" alt="Jayhawk icon" /></div>
-          <div class="icon-row  flex-item">
-            <div class="icon-row">
-              <a class="text-white pr-1" target="_blank" href="https://www.linkedin.com/company/ku-memorial-unions"> <i class="fab fa-linkedin-in"></i> </a>
-              <a class="text-white pr-1" target="_blank" href="https://www.youtube.com/channel/UCZR2WzI5HX3Y5rHdQRuGmEg"> <i class="fab fa-youtube"></i> </a>
-              <a class="text-white pr-1" target="_blank" href="https://www.instagram.com/kuunion/"> <i class="fab fa-instagram"></i> </a>
-              <a class="text-white pr-1" target="_blank" href="https://www.facebook.com/pg/KUunion"> <i class="fab fa-facebook-f"></i> </a>
-              <a class="text-white pr-1" target="_blank" href="https://twitter.com/kuunion?lang=en"> <i class="fab fa-twitter"></i> </a>
+        .flex-row {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          align-content: flex-start;
+        }
+        .icon-row {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+          align-items: center;
+          align-content: flex-start;
+        }
+        .flex-item {
+          /* flex-grow: 1; */
+          /* flex-basis: 1; */
+          /* grow shrink basis */
+          flex: 1 1 0;
+        }
+        .tiny-text {
+          font-size: 0.7em;
+        }
+        #zone-ku-footer-wrapper a:link {
+          color: white;
+        }
+        #zone-ku-footer-wrapper a:visited {
+          color:  white;
+        }
+        #zone-ku-footer-wrapper a:hover {
+          color:  var(--theme-dark);
+        }
+        #zone-ku-footer-wrapper .fab:hover {
+          color:   var(--theme-dark);
+        }
+      </style>
+      <div id="zone-ku-footer-wrapper" class="theme-background container-fluid text-white">
+         
+        <div id="zone-ku-footer" class="pt-2">
+          <div class="flex-row mb-4">
+            <div class="flex-item " style="min-width: 167px;">
+              <a href="http://www.ku.edu/"> <img src="//webmedia.ku.edu/templates/2012/images/ku_sig_logo.png" width="167" height="40" alt="KU signature" title="The University of Kansas" /> </a>
             </div>
-            <div class="">
-              <a href="http://www.ku.edu/contact/" style="color:#fab817 !important" title="Contact KU">Contact KU</a> <br />
-              Lawrence, KS | <a href="http://admissions.ku.edu/visit/maps.shtml" style="color:#fab817 !important" title="KU Maps">Maps</a>
+            <div class="flex-item flex-row "><img class="mx-auto" id="ku_footer_jayhawk" src="//webmedia.ku.edu/templates/2012/images/ku_jayhawk.png" width="56" height="50" alt="Jayhawk icon" /></div>
+            <div class="icon-row  flex-item">
+              <div class="icon-row">
+                <a class="text-white pr-1" target="_blank" href="https://www.linkedin.com/company/ku-memorial-unions"> <i class="fab fa-linkedin-in"></i> </a>
+                <a class="text-white pr-1" target="_blank" href="https://www.youtube.com/channel/UCZR2WzI5HX3Y5rHdQRuGmEg"> <i class="fab fa-youtube"></i> </a>
+                <a class="text-white pr-1" target="_blank" href="https://www.instagram.com/kuunion/"> <i class="fab fa-instagram"></i> </a>
+                <a class="text-white pr-1" target="_blank" href="https://www.facebook.com/pg/KUunion"> <i class="fab fa-facebook-f"></i> </a>
+                <a class="text-white pr-1" target="_blank" href="https://twitter.com/kuunion?lang=en"> <i class="fab fa-twitter"></i> </a>
+              </div>
+              <div class="">
+                <a href="http://www.ku.edu/contact/" style="color:#fab817 !important" title="Contact KU">Contact KU</a> <br />
+                Lawrence, KS | <a href="http://admissions.ku.edu/visit/maps.shtml" style="color:#fab817 !important" title="KU Maps">Maps</a>
+              </div>
             </div>
+  
+            <!-- </div> -->
           </div>
-
-          <!-- </div> -->
-        </div>
-
-        <div class="" id="region-ku-footer-first"></div>
-        <div class="grid-6 region region-ku-footer-second" id="region-ku-footer-second">
-          <div class="region-inner region-ku-footer-second-inner">
-            <div class="block block-ku-static block-ku-static-kufooter-links block-ku-static-ku-static-kufooter-links odd block-without-title" id="block-ku-static-ku-static-kufooter-links">
-              <div class="block-inner clearfix">
-                <div class="text-center class="text-light">
-                  <a href="http://ku.edu/academics/"  style="display:inline-block;" title="KU Academics">Academics</a> <a href="http://accessibility.ku.edu/" title="Accessible KU">Accessible KU</a>
-                  <a href="http://admissions.ku.edu/" title="KU Admissions">Admissions</a> <a href="http://www.kualumni.org/" title="Alumni information">Alumni</a> <br />
-                  <div class="w3-center w3-container">
-                    <a href="http://www.kuathletics.com/" style="display:inline-block;" title="KU Athletics">Athletics</a>
-                    <a href="http://www.ku.edu/about/campuses/" title="Campus information for KU">Campuses</a> <a href="http://www.kuendowment.org/" title="Give back through KU Endowment">Giving</a>
-                    <a href="http://employment.ku.edu" title="Find employment at KU">Jobs</a> <a href="https://publicsafety.ku.edu" title="Public Safety Office">Safety</a>
+  
+          <div class="" id="region-ku-footer-first"></div>
+          <div class="grid-6 region region-ku-footer-second" id="region-ku-footer-second">
+            <div class="region-inner region-ku-footer-second-inner">
+              <div class="block block-ku-static block-ku-static-kufooter-links block-ku-static-ku-static-kufooter-links odd block-without-title" id="block-ku-static-ku-static-kufooter-links">
+                <div class="block-inner clearfix">
+                  <div class="text-center class="text-light">
+                    <a href="http://ku.edu/academics/"  style="display:inline-block;" title="KU Academics">Academics</a> <a href="http://accessibility.ku.edu/" title="Accessible KU">Accessible KU</a>
+                    <a href="http://admissions.ku.edu/" title="KU Admissions">Admissions</a> <a href="http://www.kualumni.org/" title="Alumni information">Alumni</a> <br />
+                    <div class="w3-center w3-container">
+                      <a href="http://www.kuathletics.com/" style="display:inline-block;" title="KU Athletics">Athletics</a>
+                      <a href="http://www.ku.edu/about/campuses/" title="Campus information for KU">Campuses</a> <a href="http://www.kuendowment.org/" title="Give back through KU Endowment">Giving</a>
+                      <a href="http://employment.ku.edu" title="Find employment at KU">Jobs</a> <a href="https://publicsafety.ku.edu" title="Public Safety Office">Safety</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="w3-center w3-tiny">
-          <p class="tiny-text text-center">
-            The University of Kansas <a style="font-weight: bold;" href="https://documents.ku.edu/policies/IOA/Nondiscrimination.htm" target="_blank">prohibits discrimination</a> on the basis of race, color, ethnicity, religion, sex, national
-            origin, age, ancestry, disability, status as a veteran, sexual orientation, marital status, parental status, gender identity, gender expression, and genetic information in the university’s
-            programs and activities. Retaliation is also prohibited by university policy. The following persons have been designated to handle inquiries regarding the nondiscrimination policies and
-            are the Title IX coordinators for their respective campuses: Executive Director of the Office of Institutional Opportunity &amp; Access,
-            <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=IOA@ku.edu" style="color:#ccc" target="_blank">IOA@ku.edu</a>, 1246 West Campus Road, Room 153A, Lawrence, KS 66045,
-            785-864-6414, 711 TTY (for the Lawrence, Edwards, Parsons, Yoder, and Topeka campuses); Director, Equal Opportunity Office, Mail Stop 7004, 4330 Shawnee Mission Parkway, Fairway, KS 66205,
-            913-588-8011, 711 TTY (for the Wichita, Salina, and Kansas City, Kansas, medical center campuses).
-          </p>
-          <p>
-            <a href="http://ksdegreestats.org/">
-              <img
-                class="mx-auto"
-                style="display:block;"
-                src="https://www.ku.edu/assets/ku-template/images/KSDegreeStats_Logo_Std.png"
-                style="margin-top:10px;"
-                width="197"
-                height="20"
-                alt="Kansas Degree Statistics"
-                title="Kansas Degree Statistics"
-              />
-            </a>
-          </p>
+  
+          <div class="w3-center w3-tiny">
+            <p class="tiny-text text-center">
+              The University of Kansas <a style="font-weight: bold;" href="https://documents.ku.edu/policies/IOA/Nondiscrimination.htm" target="_blank">prohibits discrimination</a> on the basis of race, color, ethnicity, religion, sex, national
+              origin, age, ancestry, disability, status as a veteran, sexual orientation, marital status, parental status, gender identity, gender expression, and genetic information in the university’s
+              programs and activities. Retaliation is also prohibited by university policy. The following persons have been designated to handle inquiries regarding the nondiscrimination policies and
+              are the Title IX coordinators for their respective campuses: Executive Director of the Office of Institutional Opportunity &amp; Access,
+              <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=IOA@ku.edu" style="color:#ccc" target="_blank">IOA@ku.edu</a>, 1246 West Campus Road, Room 153A, Lawrence, KS 66045,
+              785-864-6414, 711 TTY (for the Lawrence, Edwards, Parsons, Yoder, and Topeka campuses); Director, Equal Opportunity Office, Mail Stop 7004, 4330 Shawnee Mission Parkway, Fairway, KS 66205,
+              913-588-8011, 711 TTY (for the Wichita, Salina, and Kansas City, Kansas, medical center campuses).
+            </p>
+            <p>
+              <a href="http://ksdegreestats.org/">
+                <img
+                  class="mx-auto"
+                  style="display:block;"
+                  src="https://www.ku.edu/assets/ku-template/images/KSDegreeStats_Logo_Std.png"
+                  style="margin-top:10px;"
+                  width="197"
+                  height="20"
+                  alt="Kansas Degree Statistics"
+                  title="Kansas Degree Statistics"
+                />
+              </a>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- end footer   ---------------------------------------------------------------------------------------------- -->
-
-    <!-- begin scripts -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- end scripts -->
-
-    <script>
+      <!-- end footer   ---------------------------------------------------------------------------------------------- -->
+  
+      <!-- begin scripts -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"
+      ></script>
+  
+      <!-- end scripts -->
+  
+      <script>
         function submitResume() {
           //alert("not just yet little fella!")
           /*
@@ -405,35 +406,44 @@
             el.style.display = "none";
           });
         }
-        const classes_ = "top-btn m-2 p-2";
+        const classes_ = "top-btn m-2 p-2 nav-item";
         function amendBar() {
+  
+          //change the welcome text to white if logged in:
+          let welcome = document.getElementById("ctl00_careerSiteHeader_lblWelcomeUser");
+          if(welcome){
+            welcome.className += " text-white";
+          }
+  
           //amend the bar
           const usrbarclass = "userBar";
-          const toaddUserBar = "top-bar navbar";
+          const toaddUserBar = "top-bar navbar  navbar-expand-md  navbar-light "; //sticky-top
           let els = document.getElementsByClassName(usrbarclass);
-  
-          //there should only be one anyway
           Array.prototype.forEach.call(els, function(el) {
-            // Do stuff here
-            // console.log(el.tagName);
             el.className += " " + toaddUserBar;
             el.style = "top:-10px"; //since we're making it static, the default position is moved down 10px.
             //(without this, you see part of the page scroll above the bar. not good! )
             //add our buttons:
-  el.innerHTML = `<a class="navbar-brand" href="https://jayhawks.csod.com/ats/careersite/search.aspx?site=6&amp;c=jayhawks">
-              <div class="text-white  text-right">
+  el.innerHTML = `<a class="navbar-brand " href="https://jayhawks.csod.com/ats/careersite/search.aspx?site=6&amp;c=jayhawks">
+              <div class="text-white  text-right union-logo">
                   <strong class="">KU Memorial Union</strong><br>Careers
               </div>
             </a>` + el.innerHTML;
-  
-            //lets add our buttons.
           });
   
           let lnks = document.getElementsByClassName("links")[0];
-          lnks.className = "nav-butts"
+          lnks.className = "nav-butts navbar-nav collapse navbar-collapse"; //no previous classes.
+          //insert buttons on the left.
           lnks.innerHTML = `<a class="${classes_}" href="https://jayhawks.csod.com/ats/careersite/search.aspx?site=6&c=jayhawks#explore">Explore Jobs</a>
             <a class="${classes_}" href="https://jayhawks.csod.com/ats/careersite/search.aspx?site=10&c=jayhawks">Benefits</a>
           <a class="${classes_}" href="https://union.ku.edu/hr-staff" target="_blank">Contact HR</a>` + lnks.innerHTML;
+  
+  
+          //add the hamburger menu
+          lnks.id= "navbarTogglerDemo03";
+          document.getElementsByClassName("user")[0].outerHTML += `<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>`;
         }
         function amendButtons() {
           console.log("amending buttons");

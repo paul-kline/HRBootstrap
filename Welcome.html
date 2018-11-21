@@ -16,11 +16,13 @@
 
 
       <div class="userBar">
-          
-          <div class="user">
+          <div class="user ">
               
           </div>
-          <div class="links">
+          
+          
+          <div class="links " id="navbarToggleExternalContent">
+              
             <!-- <a class="top-btn m-2 p-2" href="https://jayhawks.csod.com/ats/careersite/search.aspx?site=6&amp;c=jayhawks#explore">Explore Jobs</a>
             <a class="top-btn m-2 p-2" href="https://jayhawks.csod.com/ats/careersite/search.aspx?site=10&amp;c=jayhawks">Benefits</a>
               <a class="top-btn m-2 p-2" href="https://union.ku.edu/hr-staff" target="_blank">Contact HR</a>; -->
@@ -32,6 +34,8 @@
               
               <a data-tag="lnkLogIn" id="ctl00_careerSiteHeader_lnkLogIn" class="CsLinkButton top-btn m-2 p-2 " href="/ats/careersite/login.aspx?returnurl=%2fats%2fcareersite%2fsearch.aspx%3fsite%3d6%26c%3djayhawks">Log In</a>
           </div>
+          
+          
       
     
     
@@ -58,7 +62,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
-
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <!-- icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="https://union.ku.edu/sites/union.ku.edu/files/files/careersite/images/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="https://union.ku.edu/sites/union.ku.edu/files/files/careersite/images/favicon-32x32.png" />
@@ -70,7 +74,7 @@
     
     <!-- end fake header -->
 
-<div class="container mt-2">
+<div class="container">
 <!-- begin slideshow -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -115,12 +119,12 @@
     </a>
   </div>
 <!-- end slideshow -->
-     <div class="text-center text-black m-3" style="font-size: 2.5em;">
+     <div class="text-center m-3 title">
       The University of Kansas Memorial Union
      </div>
   
      <div class="w3-container w3-large w3-center theme-text-color-dark w3-mobile">
-      <div class="text-center">
+      <div class="text-center blurb">
        Come for the hot perks and stay for the people! Our 1000 Union employees are instrumental in making KU a special place for
        each student. Our efforts create campus community, opportunities for expression/exchange, experiential learning, student
        programs and essential services. The Union is a non-profit affiliate comprised of KU Dining, KU Bookstore, Student Programs
@@ -198,95 +202,95 @@
        </div>
 
 
-       <!-- Begin MailChimp Signup Form -->
-       <div class="container text-white rounded mt-2 pb-2 mb-2" style="background-color: var(--theme-new)">
-          
-          <div id="mc_embed_signup">
-           <form action="https://union.us17.list-manage.com/subscribe/post?u=c0d7720b75086c26e11bcef8e&amp;id=8d4f30590c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
-            <div id="mc_embed_signup_scroll">
-             <h2>
-              <b>Sign Up for Job Alerts</b>
-             </h2>
-             <h5 style="color:white;">Provide your information and we'll make sure you're the first to know about new job openings.</h5>
-             <div class="indicates-required">
-              <span class="asterisk">*</span> indicates required</div>
-     
-
-              <style>
-              .form-grid{
-                display: grid;
-                grid-template-areas: 
-                  "f f f f f r"
-                  "e e e e e ."
-                  "p p p p p ."
-                  "s s s s s ."
-              }
-              @media (min-width: 800px) {
-                .form-grid{
-                  display: grid;
-                  grid-template-areas: 
-                    "f f f f f f f r"
-                    "e e e e e e e ."
-                    "p p p p p p p ."
-                    "s s s s s s s ."
-                  }
-              }
-              @media (max-width: 800px) {
-                .form-grid{
-                  display: grid;
-                  grid-template-areas: 
-                    "f"
-                    "e"
-                    "p"
-                    "r"
-                    "s"
-                  }
-              }
-              </style>
-              <div class="form-grid">
-                  <div class="mc-field-group" style="grid-area: f;">
-                      <label for="mce-NAME">Full Name <span class="asterisk">*</span></label>
-                      <input type="text" value="" name="NAME" class="required text-line " style="border:none;border-bottom:solid;" id="mce-NAME" placeholder="name">
-                  </div>
-
-                  <span class="resume-group float-right" style="grid-area: r;">
-                      <label for="resumeSubmit">Want to attach a resume?</label>
-                      <input type="button" value="Upload" class="survey-monkey-button w3-hover-shadow" onclick="submitResume()">
-                  </span>
-                  <div class="mc-field-group" style="grid-area: e;">
-                      <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
-                      <input type="email" value="" name="EMAIL" class="required email text-line " style="border:none;border-bottom:solid;" id="mce-EMAIL" placeholder="email">
-                  </div>
-
-
-                  <div class="mc-field-group" style="grid-area: p;">
-                      <label for="mce-POSITION">Position Interest </label>
-                      <input type="text" value="" name="POSITION" class="text-line " style="border:none;border-bottom:solid;" id="mce-POSITION" placeholder="interest">
-                  </div>
-              </div>
-             
-             <div id="mce-responses" class="clear">
-              <div class="response" id="mce-error-response" style="display:none"></div>
-              <div class="response" id="mce-success-response" style="display:none"></div>
-             </div>
-             <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-             <div style="position: absolute; left: -5000px;" aria-hidden="true">
-              <input type="text" name="b_c0d7720b75086c26e11bcef8e_8d4f30590c" tabindex="-1" value="">
-             </div>
-             <div class="clear w3-center" style="grid-area: s;">
-              <input type="submit" value="     Submit     " name="subscribe" id="mc-embedded-subscribe" class=" button survey-monkey-button w3-hover-shadow">
-             </div>
-            </div>
-           </form>
-          </div>
-          <!-- end of survey monkey form -->
-     
-         </div>
+       
 
 </div>
 
 
+<!-- Begin MailChimp Signup Form -->
+<div class="container text-white rounded mt-2 pb-2 mb-2" style="background-color: var(--theme-new)">
+          
+    <div id="mc_embed_signup" style="font-size:1.2em;">
+     <form action="https://union.us17.list-manage.com/subscribe/post?u=c0d7720b75086c26e11bcef8e&amp;id=8d4f30590c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+      <div id="mc_embed_signup_scroll">
+       <h1>
+        <b>Sign Up for Job Alerts</b>
+       </h1>
+       <h4 >Provide your information and we'll make sure you're the first to know about new job openings.</h4>
+       <div class="indicates-required">
+        <span class="asterisk" ">*</span> indicates required</div>
 
+
+        <style>
+        .form-grid{
+          display: grid;
+          grid-template-areas: 
+            "f f f f f r"
+            "e e e e e ."
+            "p p p p p ."
+            "s s s s s ."
+        }
+        @media (min-width: 800px) {
+          .form-grid{
+            display: grid;
+            grid-template-areas: 
+              "f f f f f f f r"
+              "e e e e e e e ."
+              "p p p p p p p ."
+              "s s s s s s s ."
+            }
+        }
+        @media (max-width: 800px) {
+          .form-grid{
+            display: grid;
+            grid-template-areas: 
+              "f"
+              "e"
+              "p"
+              "r"
+              "s"
+            }
+        }
+        </style>
+        <div class="form-grid">
+            <div class="mc-field-group mb-3" style="grid-area: f;">
+                <label for="mce-NAME">Full Name <span class="asterisk">*</span></label>
+                <input type="text" value="" name="NAME" class="required text-line " style="border:none;border-bottom:solid;" id="mce-NAME" placeholder="name">
+            </div>
+
+            <span class="resume-group float-right mb-3" style="grid-area: r; ">
+                <label for="resumeSubmit">Want to attach a resume?</label>
+                <input type="button" value="Upload" class="survey-monkey-button w3-hover-shadow" onclick="submitResume()">
+            </span>
+            <div class="mc-field-group mb-3" style="grid-area: e;">
+                <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                <input type="email" value="" name="EMAIL" class="required email text-line " style="border:none;border-bottom:solid;" id="mce-EMAIL" placeholder="email">
+            </div>
+
+
+            <div class="mc-field-group mb-3" style="grid-area: p;">
+                <label for="mce-POSITION">Position Interest </label>
+                <input type="text" value="" name="POSITION" class="text-line " style="border:none;border-bottom:solid;" id="mce-POSITION" placeholder="interest">
+            </div>
+        </div>
+       
+       <div id="mce-responses" class="clear">
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+       </div>
+       <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+       <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_c0d7720b75086c26e11bcef8e_8d4f30590c" tabindex="-1" value="">
+       </div>
+       <div class="clear w3-center" style="grid-area: s;">
+        <input type="submit" value="     Submit     " name="subscribe" id="mc-embedded-subscribe" class=" button survey-monkey-button w3-hover-shadow">
+       </div>
+      </div>
+     </form>
+    </div>
+    <!-- end of survey monkey form -->
+
+   </div>
 
 
 
@@ -511,35 +515,44 @@
           el.style.display = "none";
         });
       }
-      const classes_ = "top-btn m-2 p-2";
+      const classes_ = "top-btn m-2 p-2 nav-item";
       function amendBar() {
+
+        //change the welcome text to white if logged in:
+        let welcome = document.getElementById("ctl00_careerSiteHeader_lblWelcomeUser");
+        if(welcome){
+          welcome.className += " text-white";
+        }
+
         //amend the bar
         const usrbarclass = "userBar";
-        const toaddUserBar = "top-bar navbar";
+        const toaddUserBar = "top-bar navbar  navbar-expand-md  navbar-light "; //sticky-top
         let els = document.getElementsByClassName(usrbarclass);
-
-        //there should only be one anyway
         Array.prototype.forEach.call(els, function(el) {
-          // Do stuff here
-          // console.log(el.tagName);
           el.className += " " + toaddUserBar;
           el.style = "top:-10px"; //since we're making it static, the default position is moved down 10px.
           //(without this, you see part of the page scroll above the bar. not good! )
           //add our buttons:
-el.innerHTML = `<a class="navbar-brand" href="https://jayhawks.csod.com/ats/careersite/search.aspx?site=6&amp;c=jayhawks">
-            <div class="text-white  text-right">
+el.innerHTML = `<a class="navbar-brand " href="https://jayhawks.csod.com/ats/careersite/search.aspx?site=6&amp;c=jayhawks">
+            <div class="text-white  text-right union-logo">
                 <strong class="">KU Memorial Union</strong><br>Careers
             </div>
           </a>` + el.innerHTML;
-
-          //lets add our buttons.
         });
 
         let lnks = document.getElementsByClassName("links")[0];
-        lnks.className = "nav-butts"
+        lnks.className = "nav-butts navbar-nav collapse navbar-collapse"; //no previous classes.
+        //insert buttons on the left.
         lnks.innerHTML = `<a class="${classes_}" href="https://jayhawks.csod.com/ats/careersite/search.aspx?site=6&c=jayhawks#explore">Explore Jobs</a>
           <a class="${classes_}" href="https://jayhawks.csod.com/ats/careersite/search.aspx?site=10&c=jayhawks">Benefits</a>
         <a class="${classes_}" href="https://union.ku.edu/hr-staff" target="_blank">Contact HR</a>` + lnks.innerHTML;
+
+
+        //add the hamburger menu
+        lnks.id= "navbarTogglerDemo03";
+        document.getElementsByClassName("user")[0].outerHTML += `<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>`;
       }
       function amendButtons() {
         console.log("amending buttons");

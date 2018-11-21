@@ -16,6 +16,7 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
 
     <!-- icons -->
@@ -29,7 +30,8 @@
     <link rel="stylesheet" href="./css.css" />
     <!-- end fake header -->
 
-<div class="container mt-2">
+
+<div class="container">
 <!-- begin slideshow -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -78,20 +80,21 @@
     </a>
   </div>
 <!-- end slideshow -->
-     <div class="text-center text-black m-1" style="font-size: 2.5em;">
+     <div class="text-center text-black m-1 title" >
       Full Time
      </div>
      <div class="w3-container w3-large w3-center theme-text-color-dark w3-mobile">
-      <div class="text-center">
+      <div class="text-center blurb">
             The Memorial Union actively seeks candidates whose commitments and contributions advance the Union’s mission. We offer exciting career opportunities for professionals and students. The Union is the largest employer of students on the University of Kansas campus.
 <br><br>
             Check out our benefits and Join our team!
       </div>
      </div>
   
+    </div>
 
 
-
+    <!-- put in footer -->
        <!-- Begin MailChimp Signup Form -->
        <div class="container text-white rounded mt-2 pb-2 mb-2" style="background-color: var(--theme-new)">
           
@@ -177,7 +180,7 @@
      
          </div>
 
-</div>
+
 
 
 
@@ -405,35 +408,44 @@
             el.style.display = "none";
           });
         }
-        const classes_ = "top-btn m-2 p-2";
+        const classes_ = "top-btn m-2 p-2 nav-item";
         function amendBar() {
+  
+          //change the welcome text to white if logged in:
+          let welcome = document.getElementById("ctl00_careerSiteHeader_lblWelcomeUser");
+          if(welcome){
+            welcome.className += " text-white";
+          }
+  
           //amend the bar
           const usrbarclass = "userBar";
-          const toaddUserBar = "top-bar navbar";
+          const toaddUserBar = "top-bar navbar  navbar-expand-md  navbar-light "; //sticky-top
           let els = document.getElementsByClassName(usrbarclass);
-  
-          //there should only be one anyway
           Array.prototype.forEach.call(els, function(el) {
-            // Do stuff here
-            // console.log(el.tagName);
             el.className += " " + toaddUserBar;
             el.style = "top:-10px"; //since we're making it static, the default position is moved down 10px.
             //(without this, you see part of the page scroll above the bar. not good! )
             //add our buttons:
-  el.innerHTML = `<a class="navbar-brand" href="https://jayhawks.csod.com/ats/careersite/search.aspx?site=6&amp;c=jayhawks">
-              <div class="text-white  text-right">
+  el.innerHTML = `<a class="navbar-brand " href="https://jayhawks.csod.com/ats/careersite/search.aspx?site=6&amp;c=jayhawks">
+              <div class="text-white  text-right union-logo">
                   <strong class="">KU Memorial Union</strong><br>Careers
               </div>
             </a>` + el.innerHTML;
-  
-            //lets add our buttons.
           });
   
           let lnks = document.getElementsByClassName("links")[0];
-          lnks.className = "nav-butts"
+          lnks.className = "nav-butts navbar-nav collapse navbar-collapse"; //no previous classes.
+          //insert buttons on the left.
           lnks.innerHTML = `<a class="${classes_}" href="https://jayhawks.csod.com/ats/careersite/search.aspx?site=6&c=jayhawks#explore">Explore Jobs</a>
             <a class="${classes_}" href="https://jayhawks.csod.com/ats/careersite/search.aspx?site=10&c=jayhawks">Benefits</a>
           <a class="${classes_}" href="https://union.ku.edu/hr-staff" target="_blank">Contact HR</a>` + lnks.innerHTML;
+  
+  
+          //add the hamburger menu
+          lnks.id= "navbarTogglerDemo03";
+          document.getElementsByClassName("user")[0].outerHTML += `<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>`;
         }
         function amendButtons() {
           console.log("amending buttons");

@@ -55,8 +55,9 @@
 .quote-text {
   color: white;
   text-shadow: 2px 2px 7px #000;
-
-  font-size: 1.3em;
+  background-color: rgba(0, 0, 0, 0.507);
+  font-size: 1.4em;
+  border-radius: 0.5em;
 }
 .pt-text {
   font-family: "luna", Times, serif;
@@ -110,10 +111,24 @@
   padding: 0.4em 1.8em;
   text-align: center;
   text-decoration: none;
-  border-radius: 10%;
+  border-radius: 0.25rem;
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
   font-family: Calibri;
+}
+.blurb {
+  font-size: 1.25em;
+}
+
+.title {
+  font-family: "Oswald", sans-serif;
+  /* font-size: 52px; */
+  font-size: 3.25em;
+
+  color: rgb(0, 81, 186);
+}
+.union-logo:hover {
+  color: var(--theme-dark) !important;
 }
 .survey-monkey-button:hover {
   background-color: rgb(255, 255, 255);

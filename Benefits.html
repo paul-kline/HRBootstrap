@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="./css.css" />
     <!-- end fake header -->
 
-<div class="container pt-2">
+<div class="container">
 <!-- begin slideshow -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -93,7 +93,7 @@
   </div>
 <!-- end slideshow -->
 
-     <div class="text-center text-black m-3" style="font-size: 2.5em;">
+     <div class="text-center text-black m-3 title">
           Benefits
      </div>
      <style>
@@ -105,7 +105,7 @@
         }
     </style>
      <div class="" style="display: flex; flex-flow: row wrap; justify-content: space-between; align-items: center; align-content: center;">
-      <div class="text-left ben" >
+      <div class="text-left ben blurb" >
             <p>The Union offers a competitive benefits package for our employees. As part of the Union family, you’ll have a package that covers your health, your well-being, your family and your future. 
             We offer an exciting environment with internal advancement opportunity!
             </p>
@@ -461,161 +461,160 @@
 
     <!-- end scripts -->
 
-    <!-- begin scripts -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- end scripts -->
+    <script>
+        
+    </script>
+    
 
     <script>
-      function submitResume() {
-        //alert("not just yet little fella!")
-        /*
-            the base url and key fields for the form were obtained by
-            1. create google form
-            2. in 3dot menu, click "get pre-fill link"
-            3. put values in the fields you can recognize you want to prefill. example: Name: NAMEPLACEHOLDER.
-            4. submit the form, and copy the url.
-            5. paste somewhere, and the key that is equal to NAMEPLACEHOLDER will be the key you want!
-            https://docs.google.com/forms/d/e/1FAIpQLSfQru8AD6k0-uye4WoZin3MnOnU0ixzuOhsjGUIxqzfN2cAHA/viewform?usp=pp_url&entry.1424659823=bob&entry.1848799707=goog@pooh.org
-            */
-        let baseurl = "https://docs.google.com/forms/d/e/1FAIpQLSfQru8AD6k0-uye4WoZin3MnOnU0ixzuOhsjGUIxqzfN2cAHA/viewform?usp=pp_url&";
-        let namekey = "entry.1424659823";
-        let emailkey = "entry.1848799707";
-        let enteredEmail = document.getElementById("mce-EMAIL").value;
-        let enteredName = document.getElementById("mce-NAME").value;
-        console.log(enteredName, enteredEmail);
-        let myurl = baseurl + namekey + "=" + enteredName + "&" + emailkey + "=" + enteredEmail;
-        window.open(myurl, "mywindow", "menubar=1,resizable=1,width=350,height=450");
-      }
-
-      //----  slideshow
-      var myIndex = 0;
-
-
-      function removeOverFlows(elem, j = 0) {
-        // let m = document.getElementById("mainContainer");
-        //only go 5 deep.
-        if (j > 5) {
-          return;
-        }
-        try {
-          if ((elem.style.overflow = "hidden")) {
-            elem.style.overflow = "";
-          }
-          let children = elem.childNodes;
-          for (let i = 0; i < children.length; i++) {
-            removeOverFlows(children[i], j + 1);
-            // Do stuff
-          }
-        } catch (e) {
-          console.log("error in removeOverFlows:", e);
-        }
-      }
-      //-------- slideshow
-      function moveItDown() {
-        let footer = document.getElementsByClassName("careerSiteFooter")[0];
-        footer.style.position = "relative";
-        let d = document.getElementById("myPage");
-        d.style.position = "relative";
-        let postext = "" + document.getElementsByClassName("userBar")[0].clientHeight + "px";
-        footer.style.top = postext;
-        d.style.top = postext;
-      }
-      document.addEventListener("DOMContentLoaded", function(event) {
-        try {
-          amendCornerstone();
-          //moveItDown();
-          //removeOverFlows(document.getElementById("mainContainer"));
-        } catch (e) {
-          console.log("failed, likely due to local hosting: ", e);
-        }
-      });
-      function getElementsByDataTag(str) {
-        return document.querySelectorAll(`[data-tag='${str}']`);
-      }
-
-      function amendCornerstone() {
-        //this is done first so that the buttons remain rightmost.
-        //when adding w3-right class, it stacks left <- right
-        amendButtons();
-        amendBar();
-        //remove the seperator: id: ctl00_ContentPlaceHolder1_ctl00_lbSeperator1 class: seperator
-        const seperatorclass = "seperator";
-        let els3 = document.getElementsByClassName(seperatorclass);
-        Array.prototype.forEach.call(els3, function(el) {
-          // Do stuff here
-          // console.log(el.tagName);
-          el.style.display = "none";
-        });
-        console.log("removed selectors");
-        //get rid of dumb profile icon
-        //class = iconProfile
-        const profileicon = "iconProfile";
-        let icons = document.getElementsByClassName(profileicon);
-        Array.prototype.forEach.call(icons, function(el) {
-          // Do stuff here
-          // console.log(el.tagName);
-          el.style.display = "none";
-        });
-      }
-      const classes_ = "top-btn m-2 p-2";
-      function amendBar() {
-        //amend the bar
-        const usrbarclass = "userBar";
-        const toaddUserBar = "top-bar navbar";
-        let els = document.getElementsByClassName(usrbarclass);
-
-        //there should only be one anyway
-        Array.prototype.forEach.call(els, function(el) {
-          // Do stuff here
-          // console.log(el.tagName);
-          el.className += " " + toaddUserBar;
-          el.style = "top:-10px"; //since we're making it static, the default position is moved down 10px.
-          //(without this, you see part of the page scroll above the bar. not good! )
-          //add our buttons:
-el.innerHTML = `<a class="navbar-brand" href="https://jayhawks.csod.com/ats/careersite/search.aspx?site=6&amp;c=jayhawks">
-            <div class="text-white  text-right">
-                <strong class="">KU Memorial Union</strong><br>Careers
-            </div>
-          </a>` + el.innerHTML;
-
-          //lets add our buttons.
-        });
-
-        let lnks = document.getElementsByClassName("links")[0];
-        lnks.className = "nav-butts"
-        lnks.innerHTML = `<a class="${classes_}" href="https://jayhawks.csod.com/ats/careersite/search.aspx?site=6&c=jayhawks#explore">Explore Jobs</a>
-          <a class="${classes_}" href="https://jayhawks.csod.com/ats/careersite/search.aspx?site=10&c=jayhawks">Benefits</a>
-        <a class="${classes_}" href="https://union.ku.edu/hr-staff" target="_blank">Contact HR</a>` + lnks.innerHTML;
-      }
-      function amendButtons() {
-        console.log("amending buttons");
-        //amend the buttons.
-        const btnclass = "CsLinkButton";
-        //create account info: id: ctl00_ContentPlaceHolder1_ctl00_lnkCreateProfile  data-tag: lnkCreateProfile
-        //log in info: id: ctl00_ContentPlaceHolder1_ctl00_lnkLogIn data-tag: lnkLogIn
-        const btnToAdd = `${classes_} `;
-
-        let els2 = document.getElementsByClassName(btnclass);
-        console.log("here are the cslinkButtons", els2);
-        Array.prototype.forEach.call(els2, function(el) {
-          // Do stuff here
-          // console.log(el.tagName);
-          el.className += " " + btnToAdd;
-        });
-        console.log("think I added necessary classes");
-      }
-    </script>
+            function submitResume() {
+              //alert("not just yet little fella!")
+              /*
+                  the base url and key fields for the form were obtained by
+                  1. create google form
+                  2. in 3dot menu, click "get pre-fill link"
+                  3. put values in the fields you can recognize you want to prefill. example: Name: NAMEPLACEHOLDER.
+                  4. submit the form, and copy the url.
+                  5. paste somewhere, and the key that is equal to NAMEPLACEHOLDER will be the key you want!
+                  https://docs.google.com/forms/d/e/1FAIpQLSfQru8AD6k0-uye4WoZin3MnOnU0ixzuOhsjGUIxqzfN2cAHA/viewform?usp=pp_url&entry.1424659823=bob&entry.1848799707=goog@pooh.org
+                  */
+              let baseurl = "https://docs.google.com/forms/d/e/1FAIpQLSfQru8AD6k0-uye4WoZin3MnOnU0ixzuOhsjGUIxqzfN2cAHA/viewform?usp=pp_url&";
+              let namekey = "entry.1424659823";
+              let emailkey = "entry.1848799707";
+              let enteredEmail = document.getElementById("mce-EMAIL").value;
+              let enteredName = document.getElementById("mce-NAME").value;
+              console.log(enteredName, enteredEmail);
+              let myurl = baseurl + namekey + "=" + enteredName + "&" + emailkey + "=" + enteredEmail;
+              window.open(myurl, "mywindow", "menubar=1,resizable=1,width=350,height=450");
+            }
+      
+            //----  slideshow
+            var myIndex = 0;
+      
+      
+            function removeOverFlows(elem, j = 0) {
+              // let m = document.getElementById("mainContainer");
+              //only go 5 deep.
+              if (j > 5) {
+                return;
+              }
+              try {
+                if ((elem.style.overflow = "hidden")) {
+                  elem.style.overflow = "";
+                }
+                let children = elem.childNodes;
+                for (let i = 0; i < children.length; i++) {
+                  removeOverFlows(children[i], j + 1);
+                  // Do stuff
+                }
+              } catch (e) {
+                console.log("error in removeOverFlows:", e);
+              }
+            }
+            //-------- slideshow
+            function moveItDown() {
+              let footer = document.getElementsByClassName("careerSiteFooter")[0];
+              footer.style.position = "relative";
+              let d = document.getElementById("myPage");
+              d.style.position = "relative";
+              let postext = "" + document.getElementsByClassName("userBar")[0].clientHeight + "px";
+              footer.style.top = postext;
+              d.style.top = postext;
+            }
+            document.addEventListener("DOMContentLoaded", function(event) {
+              try {
+                amendCornerstone();
+                //moveItDown();
+                //removeOverFlows(document.getElementById("mainContainer"));
+              } catch (e) {
+                console.log("failed, likely due to local hosting: ", e);
+              }
+            });
+            function getElementsByDataTag(str) {
+              return document.querySelectorAll(`[data-tag='${str}']`);
+            }
+      
+            function amendCornerstone() {
+              //this is done first so that the buttons remain rightmost.
+              //when adding w3-right class, it stacks left <- right
+              amendButtons();
+              amendBar();
+              //remove the seperator: id: ctl00_ContentPlaceHolder1_ctl00_lbSeperator1 class: seperator
+              const seperatorclass = "seperator";
+              let els3 = document.getElementsByClassName(seperatorclass);
+              Array.prototype.forEach.call(els3, function(el) {
+                // Do stuff here
+                // console.log(el.tagName);
+                el.style.display = "none";
+              });
+              console.log("removed selectors");
+              //get rid of dumb profile icon
+              //class = iconProfile
+              const profileicon = "iconProfile";
+              let icons = document.getElementsByClassName(profileicon);
+              Array.prototype.forEach.call(icons, function(el) {
+                // Do stuff here
+                // console.log(el.tagName);
+                el.style.display = "none";
+              });
+            }
+            const classes_ = "top-btn m-2 p-2 nav-item";
+            function amendBar() {
+      
+              //change the welcome text to white if logged in:
+              let welcome = document.getElementById("ctl00_careerSiteHeader_lblWelcomeUser");
+              if(welcome){
+                welcome.className += " text-white";
+              }
+      
+              //amend the bar
+              const usrbarclass = "userBar";
+              const toaddUserBar = "top-bar navbar  navbar-expand-md  navbar-light "; //sticky-top
+              let els = document.getElementsByClassName(usrbarclass);
+              Array.prototype.forEach.call(els, function(el) {
+                el.className += " " + toaddUserBar;
+                el.style = "top:-10px"; //since we're making it static, the default position is moved down 10px.
+                //(without this, you see part of the page scroll above the bar. not good! )
+                //add our buttons:
+      el.innerHTML = `<a class="navbar-brand " href="https://jayhawks.csod.com/ats/careersite/search.aspx?site=6&amp;c=jayhawks">
+                  <div class="text-white  text-right union-logo">
+                      <strong class="">KU Memorial Union</strong><br>Careers
+                  </div>
+                </a>` + el.innerHTML;
+              });
+      
+              let lnks = document.getElementsByClassName("links")[0];
+              lnks.className = "nav-butts navbar-nav collapse navbar-collapse"; //no previous classes.
+              //insert buttons on the left.
+              lnks.innerHTML = `<a class="${classes_}" href="https://jayhawks.csod.com/ats/careersite/search.aspx?site=6&c=jayhawks#explore">Explore Jobs</a>
+                <a class="${classes_}" href="https://jayhawks.csod.com/ats/careersite/search.aspx?site=10&c=jayhawks">Benefits</a>
+              <a class="${classes_}" href="https://union.ku.edu/hr-staff" target="_blank">Contact HR</a>` + lnks.innerHTML;
+      
+      
+              //add the hamburger menu
+              lnks.id= "navbarTogglerDemo03";
+              document.getElementsByClassName("user")[0].outerHTML += `<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>`;
+            }
+            function amendButtons() {
+              console.log("amending buttons");
+              //amend the buttons.
+              const btnclass = "CsLinkButton";
+              //create account info: id: ctl00_ContentPlaceHolder1_ctl00_lnkCreateProfile  data-tag: lnkCreateProfile
+              //log in info: id: ctl00_ContentPlaceHolder1_ctl00_lnkLogIn data-tag: lnkLogIn
+              const btnToAdd = `${classes_} `;
+      
+              let els2 = document.getElementsByClassName(btnclass);
+              console.log("here are the cslinkButtons", els2);
+              Array.prototype.forEach.call(els2, function(el) {
+                // Do stuff here
+                // console.log(el.tagName);
+                el.className += " " + btnToAdd;
+              });
+              console.log("think I added necessary classes");
+            }
+          </script>
     <!-- end footer section -->
   </body>
 </html>
