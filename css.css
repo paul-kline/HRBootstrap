@@ -119,7 +119,10 @@
 .blurb {
   font-size: 1.25em;
 }
-
+.welcome-blurb {
+  font-size: 1.55em;
+  font-weight: bold;
+}
 .title {
   font-family: "Oswald", sans-serif;
   /* font-size: 52px; */
