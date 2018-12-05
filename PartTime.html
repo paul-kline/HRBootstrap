@@ -335,73 +335,7 @@
     <!-- end scripts -->
 
     <script>
-      function submitResume() {
-        //alert("not just yet little fella!")
-        /*
-            the base url and key fields for the form were obtained by
-            1. create google form
-            2. in 3dot menu, click "get pre-fill link"
-            3. put values in the fields you can recognize you want to prefill. example: Name: NAMEPLACEHOLDER.
-            4. submit the form, and copy the url.
-            5. paste somewhere, and the key that is equal to NAMEPLACEHOLDER will be the key you want!
-            https://docs.google.com/forms/d/e/1FAIpQLSfQru8AD6k0-uye4WoZin3MnOnU0ixzuOhsjGUIxqzfN2cAHA/viewform?usp=pp_url&entry.1424659823=bob&entry.1848799707=goog@pooh.org
-            */
-        let baseurl = "https://docs.google.com/forms/d/e/1FAIpQLSfQru8AD6k0-uye4WoZin3MnOnU0ixzuOhsjGUIxqzfN2cAHA/viewform?usp=pp_url&";
-        let namekey = "entry.1424659823";
-        let emailkey = "entry.1848799707";
-        let enteredEmail = document.getElementById("mce-EMAIL").value;
-        let enteredName = document.getElementById("mce-NAME").value;
-        console.log(enteredName, enteredEmail);
-        let myurl = baseurl + namekey + "=" + enteredName + "&" + emailkey + "=" + enteredEmail;
-        window.open(myurl, "mywindow", "menubar=1,resizable=1,width=350,height=450");
-      }
-
-      //----  slideshow
-      var myIndex = 0;
-
-      function removeOverFlows(elem, j = 0) {
-        // let m = document.getElementById("mainContainer");
-        //only go 5 deep.
-        if (j > 5) {
-          return;
-        }
-        try {
-          if ((elem.style.overflow = "hidden")) {
-            elem.style.overflow = "";
-          }
-          let children = elem.childNodes;
-          for (let i = 0; i < children.length; i++) {
-            removeOverFlows(children[i], j + 1);
-            // Do stuff
-          }
-        } catch (e) {
-          console.log("error in removeOverFlows:", e);
-        }
-      }
-      //-------- slideshow
-      function moveItDown() {
-        let footer = document.getElementsByClassName("careerSiteFooter")[0];
-        footer.style.position = "relative";
-        let d = document.getElementById("myPage");
-        d.style.position = "relative";
-        let postext = "" + document.getElementsByClassName("userBar")[0].clientHeight + "px";
-        footer.style.top = postext;
-        d.style.top = postext;
-      }
-      document.addEventListener("DOMContentLoaded", function(event) {
-        try {
-          amendCornerstone();
-          //moveItDown();
-          //removeOverFlows(document.getElementById("mainContainer"));
-        } catch (e) {
-          console.log("failed, likely due to local hosting: ", e);
-        }
-      });
-      function getElementsByDataTag(str) {
-        return document.querySelectorAll(`[data-tag='${str}']`);
-      }
-
-      function amendCornerstone() {
+     function amendCornerstone() {
         //this is done first so that the buttons remain rightmost.
         //when adding w3-right class, it stacks left <- right
         try {
@@ -431,6 +365,12 @@
 
         clickMaps();
         displayEverify();
+        injectFavicon()
+      }
+      function injectFavicon(){
+        const content = `<link rel="shortcut icon" href="https://union.ku.edu/misc/favicon.ico" type="image/vnd.microsoft.icon" />`;
+        document.getElementsByTagName("head")[0].innerHTML += content;
+
       }
       function displayEverify() {
         if (!window.welcome) {
